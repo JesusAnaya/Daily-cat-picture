@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="card">
+<div class="card-image">
+  <img src="http://thecatapi.com/api/images/get?format=src&size=med">
+  <span class="card-title">Daily Cat Picture</span>
+</div>
+<div class="card-content">
+  <strong>Register to get a new cat picture every day!</strong>
+</div>
+<div class="card-action">
+  <form action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn">Register!</button>
+  </form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,4 @@
+.DS_Stroe
+*.pyc
+*.pyo
+*.sqlite3
